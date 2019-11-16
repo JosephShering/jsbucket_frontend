@@ -10,8 +10,8 @@ export default () => {
 
     return (
         <form onSubmit={handleSubmit(registerUser)}>
-            <h3>
-                Sign up
+            <h3 className="mt-12">
+                ...Or Sign up with your email
             </h3>
 
             <p>{errors.email && errors.email.message}</p>
@@ -57,9 +57,11 @@ export default () => {
                     })} />
             </label>
 
-            <button type="submit">
-                GO
+            <div className="flex justify-end">
+            <button className="bg-gray-700 text-white rounded w-40 mt-4 p-4" type="submit">
+                REGISTER
             </button>
+            </div>
         </form>
     )
 }
