@@ -32,8 +32,14 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title="Dead Simple JSON Backend"
       titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={[
+        {
+          rel: `stylesheet`,
+          href: `https://fonts.googleapis.com/css?family=Arvo:400,700&display=swap>`
+        }
+      ]}
       meta={[
         {
           name: `description`,

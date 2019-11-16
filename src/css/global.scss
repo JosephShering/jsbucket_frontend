@@ -1,0 +1,104 @@
+@import './twitter_button';
+
+$activeColor: #4C51BF;
+$activeColorBorder: #434190;
+
+body {
+    margin: 0;
+    font-family: Arvo, serif;
+    color: #404040;
+    background-color: #FFFFFF;
+    font-size: 16px;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: [page-start] 1fr [content-start] 648px [content-end] 1fr [page-end];
+    grid-auto-rows: 1fr;
+    align-items: center;
+}
+
+.content {
+    grid-column: content;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p {
+    letter-spacing: .5px;
+    margin: 8px 0 0;
+}
+
+input[type='text'], input[type='password'], input[type='email'] {
+    background: transparent;
+    // border: none;
+    padding: 8px 4px 0;
+}
+
+label {
+    padding: 16px;
+    background-color: #F7FAFC;
+    box-shadow: 0px 4px 1px rgba(80, 80, 80, 0.15);
+    display: flex;
+    flex-direction: column;
+    margin: 22px 0 0;
+    height: 60px;
+    border-radius: 3px;
+
+    & > span {
+        flex: 0 1 auto;
+        font-size: 14px;
+        letter-spacing: .6px;
+    }
+
+    > input {
+        flex: 1;
+        font-size: 18px;
+        outline: 0;
+        border: none;
+        // border-bottom: 1px solid #2D3748;
+        box-sizing: border-box;
+
+
+        &:focus {
+            border-width: 3px;
+            border-bottom-style: solid;
+            border-color: $activeColor;
+            transition: border-width .1s ease-in;
+        }
+    }
+}
+
+button {
+    border: 0;
+    background-color: $activeColor;
+    color: #FFFFFF;
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: Arvo;
+    margin: 22px 0 0;
+    width: 150px;
+    float: right;
+
+    border-bottom:6px solid $activeColorBorder;
+
+    &:active {
+        border-bottom:0px solid $activeColorBorder;
+        outline: 0;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
